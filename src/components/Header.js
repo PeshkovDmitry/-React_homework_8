@@ -1,9 +1,15 @@
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { switchMenuVisible } from "../reducers/slice";
 
 function Header() {
 
     const basketCount = useSelector(state => state.shop.basket.count);
+    const dispatch = useDispatch();
+
+    const onMenuItemClick = () => {
+        dispatch(switchMenuVisible());
+    };
 
     return (
         <header className="header">
@@ -17,7 +23,7 @@ function Header() {
             </div>
             <div className="right_header_group">
                 <button className="header_button" id="mainmenubutton">
-                    <img src="./img/Menu.webp" alt="Значок меню" />
+                    <img src="./img/Menu.webp" alt="Значок меню" onClick={onMenuItemClick}/>
                 </button>
                 <button className="header_button hidden">
                     <img src="./img/Account.webp" alt="Значок входа в аккаунт" />

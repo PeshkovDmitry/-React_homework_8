@@ -55,7 +55,7 @@ const initialState = {
         count: 2,
         items: []
     },
-    menu: { visible: true }
+    menu: { visible: false }
 };
 
 const slice = createSlice({
@@ -65,14 +65,6 @@ const slice = createSlice({
         add: (state, action) => {
             state.basket.count++;
             state.basket.items = [...state.basket.items, state.products.filter(item => item.id == action.payload)];    
-            console.log(state.basket.items);    
-            // state.goods = [...state.goods, {
-            //     id: Date.now(),
-            //     name: action.payload.name,
-            //     description: action.payload.description,
-            //     price: action.payload.price,
-            //     available: action.payload.available
-            // }];
         },
         remove: (state, action) => {
             // state.goods = state.goods.filter((item) => item.id != action.payload);
@@ -89,9 +81,12 @@ const slice = createSlice({
             //     price: action.payload[0].price,
             //     available: action.payload[0].available
             // };
+        },
+        switchMenuVisible: (state) => {
+            state.menu.visible = !state.menu.visible;
         }
     }
 });
 
-export const { add, remove, changeAvailable, change } = slice.actions;
+export const { add, remove, changeAvailable, change, switchMenuVisible } = slice.actions;
 export default slice.reducer; 
