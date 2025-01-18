@@ -5,7 +5,6 @@ import ProductsItem from "./ProductsItem";
 function Products() {
 
     const products = useSelector(state => state.shop.products);
-    console.log(products);
 
     return (
         <section className="products">

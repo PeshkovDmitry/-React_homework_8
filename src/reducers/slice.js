@@ -59,10 +59,13 @@ const initialState = {
 };
 
 const slice = createSlice({
-    name: 'goods',
+    name: 'shop',
     initialState,
     reducers: {
         add: (state, action) => {
+            state.basket.count++;
+            state.basket.items = [...state.basket.items, state.products.filter(item => item.id == action.payload)];    
+            console.log(state.basket.items);    
             // state.goods = [...state.goods, {
             //     id: Date.now(),
             //     name: action.payload.name,
