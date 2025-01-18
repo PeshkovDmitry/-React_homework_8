@@ -4,9 +4,13 @@ function Subscribe() {
             <img className="subscribe-background" src="./img/Sea.webp" alt="Море на заднем плане" />
             <div className="subscribe-info">
                 <img className="subscribe-info__image" src="./img/Intersect.webp" alt="Лицо" />
-                <p className="subscribe-info_text">&laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi, <span
-                    className="subscribe-info_text__italic">a&nbsp;pulvinar purus
-                    condimentum</span>&raquo;</p>
+                <p className="subscribe-info_text">
+                    &laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
+                    <span className="subscribe-info_text__italic">
+                        a&nbsp;pulvinar purus condimentum
+                    </span>
+                    &raquo;
+                </p>
             </div>
             <div className="subscribe-buttongroup">
                 <h2 className="subscribe-buttongroup_h3">SUBSCRIBE</h2>
