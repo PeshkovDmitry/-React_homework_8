@@ -5,13 +5,14 @@ import './components/styles/style.css';
 
 import store from './store/store';
 import Shop from './components/Shop';
+import Basket from './components/Basket';
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <Routes>
-          <Route path='/basket' element={<p>Здесь будет корзина</p>} />
+          <Route path='/basket' element={<Basket/>} />
           <Route path='/' element={<Shop />} />
         </Routes>
       </Router>

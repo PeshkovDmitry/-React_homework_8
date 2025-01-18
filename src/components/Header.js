@@ -30,7 +30,9 @@ function Header() {
                 </button>
                 <div className="header_button hidden position_relative">
                     <div className="basket-count">{basketCount}</div>
-                    <img src="./img/Basket.webp" alt="Значок корзины" />
+                    <Link to={"/basket"}>
+                        <img src="./img/Basket.webp" alt="Значок корзины" />
+                    </Link>
                 </div>
             </div>
         </header>
