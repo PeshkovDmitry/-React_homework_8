@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Feauture from './components/Feauture';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import MainMenu from './components/MainMenu';
+import Offer from './components/Offer';
+import Products from './components/Products';
+import './components/styles/style.css';
+import Subscribe from './components/Subscribe';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1 style={{display: "none"}}>My internet shop</h1>
+      <Header />
+      <MainMenu />
+      <Offer />
+      <Products />
+      <Feauture />
+      <Subscribe />
+      <Footer />
+    </>
   );
 }
 
