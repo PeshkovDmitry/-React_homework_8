@@ -81,7 +81,8 @@ const slice = createSlice({
     reducers: {
         add: (state, action) => {
             state.basket.count++;
-            if (state.basket.items.filter(item => item.id == action.payload).length > 0) {
+            let isInBasket = state.basket.items.filter(item => item.id == action.payload).length > 0;
+            if (isInBasket) {
                 // Данный продукт уже есть в корзине
                 let oldCount = state.basket.items.filter(item => item.id == action.payload)[0].count;
                 state.basket.items.filter(item => item.id == action.payload)[0].count = oldCount + 1;
