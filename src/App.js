@@ -1,25 +1,20 @@
 import { Provider } from 'react-redux';
-import './App.css';
-import Feauture from './components/Feauture';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Main from './components/Main';
-import Offer from './components/Offer';
-import Products from './components/Products';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './components/styles/style.css';
-import Subscribe from './components/Subscribe';
+
 import store from './store/store';
+import Shop from './components/Shop';
 
 function App() {
   return (
     <Provider store={store}>
-      <Header />
-      <Main />
-      <Offer />
-      <Products />
-      <Feauture />
-      <Subscribe />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path='/basket' element={<p>Здесь будет корзина</p>} />
+          <Route path='/' element={<Shop />} />
+        </Routes>
+      </Router>
     </Provider>
   );
 }

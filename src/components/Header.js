@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { switchMenuVisible } from "../reducers/slice";
+import { Link } from "react-router-dom";
 
 function Header() {
 
@@ -14,16 +14,16 @@ function Header() {
     return (
         <header className="header">
             <div className="left_header_group">
-                <a href="#">
+                <Link to={"/"}>
                     <img src="./img/Logo.webp" alt="Логотип сайта" />
-                </a>
+                </Link>
                 <button className="header_button">
                     <img src="./img/Find.webp" width="26" alt="Значок поиска" />
                 </button>
             </div>
             <div className="right_header_group">
                 <button className="header_button" id="mainmenubutton">
-                    <img src="./img/Menu.webp" alt="Значок меню" onClick={onMenuItemClick}/>
+                    <img src="./img/Menu.webp" alt="Значок меню" onClick={onMenuItemClick} />
                 </button>
                 <button className="header_button hidden">
                     <img src="./img/Account.webp" alt="Значок входа в аккаунт" />

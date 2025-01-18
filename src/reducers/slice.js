@@ -52,7 +52,7 @@ const initialState = {
         },
     ],
     basket: {
-        count: 2,
+        count: 0,
         items: []
     },
     menu: { visible: false }
