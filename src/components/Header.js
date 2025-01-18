@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+
 function Header() {
+
+    const basketCount = useSelector(state => state.shop.basket.count);
+
     return (
         <header className="header">
             <div className="left_header_group">
@@ -17,7 +23,7 @@ function Header() {
                     <img src="./img/Account.webp" alt="Значок входа в аккаунт" />
                 </button>
                 <div className="header_button hidden position_relative">
-                    <div className="basket-count">5</div>
+                    <div className="basket-count">{basketCount}</div>
                     <img src="./img/Basket.webp" alt="Значок корзины" />
                 </div>
             </div>
